@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>กำลังเปิดเบราว์เซอร์...</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hidden { display: none; }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>กำลังเปิดเว็บในเบราว์เซอร์...</h2>
+  <p id="notice" class="hidden">ถ้าเว็บไม่เปิดอัตโนมัติ กรุณากดปุ่มด้านล่าง</p>
+  <button id="copyBtn" class="hidden">📋 คัดลอกลิงก์เว็บไซต์</button>
+
+  <script>
+    const isLineApp = navigator.userAgent.toLowerCase().includes("line");
+    const currentUrl = "https://www.dongroups.com/%E0%B8%A3%E0%B8%9A%E0%B9%81%E0%B8%88%E0%B8%87%E0%B9%80%E0%B8%84%E0%B8%AA/";
+    
+    if (isLineApp) {
+      document.getElementById('notice').classList.remove('hidden');
+      document.getElementById('copyBtn').classList.remove('hidden');
+
+      document.getElementById('copyBtn').onclick = () => {
+        navigator.clipboard.writeText(currentUrl);
+        alert("คัดลอกลิงก์แล้ว กรุณาวางในเบราว์เซอร์เช่น Chrome หรือ Safari");
+      };
+    } else {
+      // เด้งไปยังเบราว์เซอร์ปกติ
+      window.location.href = currentUrl;
+    }
+  </script>
+
+</body>
+</html>

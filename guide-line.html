@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เปิดในเบราว์เซอร์</title>
+  <script>
+    const ua = navigator.userAgent.toLowerCase();
+    if (!ua.includes("line")) {
+      window.location.href = "https://www.dongroups.com/%E0%B8%A3%E0%B8%9A%E0%B9%81%E0%B8%88%E0%B8%87%E0%B9%80%E0%B8%84%E0%B8%AA";
+    }
+  </script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+      background-color: #fff;
+    }
+    img {
+      width: 100%;
+      max-width: 400px;
+      margin: 1rem auto;
+    }
+    button {
+      padding: 1rem 2rem;
+      margin: 0.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    #copyStatus {
+      color: green;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h2>⚠️ กรุณาเปิดเว็บไซต์นี้ในเบราว์เซอร์</h2>
+  <p>คุณกำลังเปิดเว็บไซต์นี้จากแอป LINE ซึ่งอาจทำให้บางฟีเจอร์ไม่ทำงาน</p>
+  <p>กรุณาเปิดใน Safari หรือ Chrome เพื่อใช้งานได้เต็มรูปแบบ</p>
+
+  <img src="A_digital_instructional_image_has_a_white_backgrou.png" alt="วิธีเปิดในเบราว์เซอร์" />
+
+  <div>
+    <button onclick="copyLink()">📋 คัดลอกลิงก์เว็บไซต์</button>
+    <p id="copyStatus"></p>
+  </div>
+
+  <script>
+    function copyLink() {
+      navigator.clipboard.writeText("https://www.dongroups.com/%E0%B8%A3%E0%B8%9A%E0%B9%81%E0%B8%88%E0%B8%87%E0%B9%80%E0%B8%84%E0%B8%AA").then(() => {
+        document.getElementById('copyStatus').innerText = '✅ คัดลอกลิงก์แล้ว!';
+      });
+    }
+  </script>
+</body>
+</html>

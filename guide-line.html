@@ -18,9 +18,12 @@
       background-color: #fff;
     }
     img {
-      width: 100%;
-      max-width: 400px;
+      max-width: 100%;
       margin: 1rem auto;
+    }
+    .logo {
+      width: 120px;
+      margin-bottom: 1rem;
     }
     button {
       padding: 1rem 2rem;
@@ -36,19 +39,29 @@
       color: green;
       margin-top: 0.5rem;
     }
+    .powered {
+      margin-top: 2rem;
+      font-weight: bold;
+      color: orange;
+      font-size: 1.1rem;
+    }
   </style>
 </head>
 <body>
-  <h2>⚠️ กรุณาเปิดเว็บไซต์นี้ในเบราว์เซอร์</h2>
-  <p>คุณกำลังเปิดเว็บไซต์นี้จากแอป LINE ซึ่งอาจทำให้บางฟีเจอร์ไม่ทำงาน</p>
-  <p>กรุณาเปิดใน Safari หรือ Chrome เพื่อใช้งานได้เต็มรูปแบบ</p>
+  <!-- โลโก้ของ DonGroups -->
+  <img src="Dongroups.jpg" alt="DonGroups Logo" class="logo" />
 
+  <!-- ภาพแนะนำการเปิดในเบราว์เซอร์ -->
   <img src="A_digital_instructional_image_has_a_white_backgrou.png" alt="วิธีเปิดในเบราว์เซอร์" />
 
+  <!-- ปุ่มคัดลอกลิงก์ -->
   <div>
     <button onclick="copyLink()">📋 คัดลอกลิงก์เว็บไซต์</button>
     <p id="copyStatus"></p>
   </div>
+
+  <!-- Powered by -->
+  <div class="powered">Powered by DonGroups</div>
 
   <script>
     function copyLink() {
